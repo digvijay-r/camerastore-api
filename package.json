@@ -1,0 +1,27 @@
+{
+  "name": "camerastore-api",
+  "version": "1.0.0",
+  "description": "REST APIs for e-commerce system for your local camera store where people can come and buy cameras.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digvijay-playmoogley/camerastore-api.git"
+  },
+  "author": "Digvijay Rathore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digvijay-playmoogley/camerastore-api/issues"
+  },
+  "homepage": "https://github.com/digvijay-playmoogley/camerastore-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
