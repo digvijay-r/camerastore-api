@@ -11,7 +11,7 @@
 const express = require('express');
 require('./src/db/dbConnection.js');
 const userRouter = require('./src/routes/user.js');
-
+require('./src/seedProductData/createSeedData.js')
 
 const app = express();
 const port = process.env.port || 3000;
