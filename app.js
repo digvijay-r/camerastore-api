@@ -5,13 +5,19 @@
  * Author: Digvijay Rathore (rathore.digvijay10@gmail.com)
  * -----
  * Last Modified: Sun Sep 27 2020
- * Modified By: digvijay
+ * Modified By: Digvijay Rathore
  */
 
 const express = require('express');
+require('./src/db/dbConnection.js');
+const userRouter = require('./src/routes/user.js');
+
 
 const app = express();
-const port = process.env.port || 8080;
+const port = process.env.port || 3000;
+
+app.use(express.json())
+app.use(userRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello from server');
