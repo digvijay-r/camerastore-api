@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "357c416d-bef0-49b7-aebd-255c834f5d6b",
+		"name": "Camera Store API",
+		"description": "The API used to develop the camera store ecomm app.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Digvijay\",\n    \"password\" : \"test@@11\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"signUp"
+					]
+				},
+				"description": "Sign Up a user to the store."
+			},
+			"response": [
+				{
+					"name": "Sign Up",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Digvijay\",\n    \"password\" : \"test@@11\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signUp"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "307"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"133-bjYdLxqkdxAaEvnFgDwEjT+EIqw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Sep 2020 08:26:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"_id\": \"5f704cb99c7c422b74ceb7ba\",\n        \"name\": \"Digvijay\",\n        \"createdAt\": \"2020-09-27T08:26:33.941Z\",\n        \"updatedAt\": \"2020-09-27T08:26:33.941Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjcwNGNiOTljN2M0MjJiNzRjZWI3YmEiLCJpYXQiOjE2MDExOTUxOTR9.Ci4KQmQbhtJ1mXa7X9tj-OGH6FsHDHfSqAT_f-7Gp5k\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Digvijay\",\n    \"password\" : \"test@@11\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				},
+				"description": "API for logging in of the User"
+			},
+			"response": [
+				{
+					"name": "Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Digvijay\",\n    \"password\" : \"test@@11\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "311"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"137-LvlPh77obIg34leAU6EF41jOepw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Sep 2020 08:30:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userData\": {\n        \"_id\": \"5f704cb99c7c422b74ceb7ba\",\n        \"name\": \"Digvijay\",\n        \"createdAt\": \"2020-09-27T08:26:33.941Z\",\n        \"updatedAt\": \"2020-09-27T08:26:33.941Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjcwNGNiOTljN2M0MjJiNzRjZWI3YmEiLCJpYXQiOjE2MDExOTU0Mjl9.BHhnYgB9EYbtFECgp8ze_Xs-aw6xNLE1QUI1yd9RnPs\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjcwNGNiOTljN2M0MjJiNzRjZWI3YmEiLCJpYXQiOjE2MDExOTkyMDV9.sYpMC2XmwNplAoIMTvqKBYH7Js5YMgFMlZamGjAvMlA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/products?limit=10&skip=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "Limit documents to this value per page"
+						},
+						{
+							"key": "skip",
+							"value": "0",
+							"description": "Skip documents"
+						}
+					]
+				},
+				"description": "This API list all the products. API Uses pagination with limit and akip values, the limit value limit the value of documents per page and skip value skip the certain number of documents."
+			},
+			"response": [
+				{
+					"name": "List Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjcwNGNiOTljN2M0MjJiNzRjZWI3YmEiLCJpYXQiOjE2MDExOTkyMDV9.sYpMC2XmwNplAoIMTvqKBYH7Js5YMgFMlZamGjAvMlA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products?limit=10&skip=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Limit documents to this value per page"
+								},
+								{
+									"key": "skip",
+									"value": "0",
+									"description": "Skip documents"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1285"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"505-lunhZLIVEfUzoopPSKhaqxPcrIE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Sep 2020 09:41:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"5f7058c121344f3f0df6a8fc\",\n        \"name\": \"Nikon NK96\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 7555.7,\n        \"make\": 2017,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a8fd\",\n        \"name\": \"Nikon D150\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 8000.25,\n        \"make\": 2018,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a8fe\",\n        \"name\": \"Nikon LV85\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 9999.85,\n        \"make\": 2019,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a8ff\",\n        \"name\": \"Nikon D350\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 15000.49,\n        \"make\": 2020,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a900\",\n        \"name\": \"Nikon D450\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 5000,\n        \"make\": 2017,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a901\",\n        \"name\": \"Nikon DX68\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 8999.6,\n        \"make\": 2020,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a902\",\n        \"name\": \"Nikon D650\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 6559,\n        \"make\": 2019,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a903\",\n        \"name\": \"Nikon D750\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 4889,\n        \"make\": 2018,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a904\",\n        \"name\": \"Nikon D850\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 2999,\n        \"make\": 2017,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f7058c121344f3f0df6a905\",\n        \"name\": \"Nikon D950\",\n        \"description\": \"Camera with this specs\",\n        \"price\": 2999,\n        \"make\": 2010,\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add to Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjcwNzQ2ZjQyNzRiYTVlMGE4MWYyZTMiLCJpYXQiOjE2MDEyMDUzNTl9.w93zcxufqzp_tpNuFX8jcAQHWVqWLmtLoWXfs5jMh9w",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\" : \"5f7058c121344f3f0df6a900\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/addToCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"addToCart"
+					]
+				},
+				"description": "This API add the product to the cart of user"
+			},
+			"response": [
+				{
+					"name": "Add to Cart",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjcwNzQ2ZjQyNzRiYTVlMGE4MWYyZTMiLCJpYXQiOjE2MDEyMDUzNTl9.w93zcxufqzp_tpNuFX8jcAQHWVqWLmtLoWXfs5jMh9w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\" : \"5f7058c121344f3f0df6a907\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/addToCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"addToCart"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16-iBApgLN3uZ39qS1lRsTh3Cb3q7Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Sep 2020 11:19:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Product added to cart!"
+				}
+			]
+		},
+		{
+			"name": "Get Cart Details ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjcwNzQ2ZjQyNzRiYTVlMGE4MWYyZTMiLCJpYXQiOjE2MDEyMDUzNTl9.w93zcxufqzp_tpNuFX8jcAQHWVqWLmtLoWXfs5jMh9w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/products/userCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"userCart"
+					]
+				},
+				"description": "This API return the cart details of the user."
+			},
+			"response": [
+				{
+					"name": "Get Cart Details ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjcwNzQ2ZjQyNzRiYTVlMGE4MWYyZTMiLCJpYXQiOjE2MDEyMDUzNTl9.w93zcxufqzp_tpNuFX8jcAQHWVqWLmtLoWXfs5jMh9w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products/userCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"userCart"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "343"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"157-PwZ26fzp8mZWafiRT/cW6L9nhn4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Sep 2020 12:42:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cart\": [\n        {\n            \"_id\": \"5f7058c121344f3f0df6a907\",\n            \"name\": \"Sony S100\",\n            \"description\": \"Camera with this specs\",\n            \"price\": 8999.99,\n            \"make\": 2018,\n            \"__v\": 0,\n            \"totalAmt\": 26999.97,\n            \"qty\": 3\n        },\n        {\n            \"_id\": \"5f7058c121344f3f0df6a900\",\n            \"name\": \"Nikon D450\",\n            \"description\": \"Camera with this specs\",\n            \"price\": 5000,\n            \"make\": 2017,\n            \"__v\": 0,\n            \"totalAmt\": 10000,\n            \"qty\": 2\n        }\n    ],\n    \"totalCartAmt\": 36999.97\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

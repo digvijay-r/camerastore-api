@@ -14,6 +14,7 @@ const Product = require('../models/product.js');
 
 const router = new express.Router();
 
+// API Route: Get all Products
 router.get('/products', auth, async (req, res) => {
     const optns = {};
     if (req.query.skip) {
@@ -31,6 +32,7 @@ router.get('/products', auth, async (req, res) => {
     }
 });
 
+// API Route: Add Product to cart
 router.post('/products/addToCart', auth, async (req, res) => {
     console.log("user data ", req.user, req.body);
     try {
@@ -66,7 +68,27 @@ router.post('/products/addToCart', auth, async (req, res) => {
         res.status(400).send(error);
     }
 
+});
 
+// API Route: Get Cart of User 
+router.get('/products/userCart', auth, async (req, res) => {
+    try {
+        let cart = [], totalCartAmt = 0;
+        for (let index = 0; index < req.user.cart.length; index++) {
+            const element = req.user.cart[index];
+            const productDetails = await Product.findById(element.productId);
+            // console.log(productDetails);
+            let product = productDetails.toObject();
+            product.totalAmt = product.price * element.qty;
+            product.qty = element.qty;
+            totalCartAmt += product.totalAmt;
+            cart.push(product);
+        }
+        // console.log("product array ", totalCartAmt, cart);
+        res.send({ cart, totalCartAmt });
+    } catch (error) {
+        res.status(500).send();
+    }
 })
 
 module.exports = router;
