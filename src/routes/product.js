@@ -15,7 +15,7 @@ const Product = require('../models/product.js');
 const router = new express.Router();
 
 // API Route: Get all Products
-router.get('/products', auth, async (req, res) => {
+router.get('/products', async (req, res) => {
     const optns = {};
     if (req.query.skip) {
         optns.skip = parseInt(req.query.skip);
