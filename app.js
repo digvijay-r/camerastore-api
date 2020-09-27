@@ -11,6 +11,7 @@
 const express = require('express');
 require('./src/db/dbConnection.js');
 const userRouter = require('./src/routes/user.js');
+const productRouter = require('./src/routes/product.js');
 require('./src/seedProductData/createSeedData.js')
 
 const app = express();
@@ -18,6 +19,7 @@ const port = process.env.port || 3000;
 
 app.use(express.json())
 app.use(userRouter);
+app.use(productRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello from server');
