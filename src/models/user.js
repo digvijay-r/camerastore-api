@@ -34,7 +34,15 @@ const userSchema = new mongoose.Schema({
                 throw new Error('Password cannot contain "password"')
             }
         }
-    }
+    },
+    cart: [{
+        productId: {
+            type: String
+        },
+        qty: {
+            type: Number
+        }
+    }]
 }, {
     timestamps: true
 });
